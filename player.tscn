@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://c6mvnwm6uk5os"]
+[gd_scene load_steps=14 format=3 uid="uid://c6mvnwm6uk5os"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_qf8yh"]
+[ext_resource type="Resource" uid="uid://bjt4r5nv6ul7d" path="res://DefaultMovementData.tres" id="2_6ns4v"]
 [ext_resource type="Texture2D" uid="uid://xh46wcjcsppl" path="res://assets/player.png" id="2_ncawh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_syy12"]
@@ -83,6 +84,7 @@ animations = [{
 [node name="Player" type="CharacterBody2D"]
 floor_constant_speed = true
 script = ExtResource("1_qf8yh")
+movement_data = ExtResource("2_6ns4v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -95,5 +97,5 @@ sprite_frames = SubResource("SpriteFrames_6l87o")
 animation = &"jump"
 
 [node name="CoyoteJumpTimer" type="Timer" parent="."]
-wait_time = 0.1
+wait_time = 0.05
 one_shot = true
