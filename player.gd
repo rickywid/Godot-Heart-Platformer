@@ -71,7 +71,6 @@ func handle_acceleration(input_axis, delta):
 func handle_air_acceleration(input_axis, delta):
 	if is_on_floor(): return
 	if input_axis != 0:
-		print_debug(true)
 		velocity.x = move_toward(velocity.x, movement_data.speed * input_axis, movement_data.air_acceleration * delta)
 
 func apply_air_resistance(input_axis, delta):
