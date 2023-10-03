@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 @export var movement_data:PlayerMovementData
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var air_jump = false
 var just_wall_jumped = false
@@ -59,13 +58,11 @@ func handle_jump():
 	
 func apply_friction(input_axis, delta):
 	if !input_axis and is_on_floor():
-		# velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.x = move_toward(velocity.x, 0, movement_data.friction * delta)
 		
 func handle_acceleration(input_axis, delta):
 	if not is_on_floor(): return
 	if input_axis:
-		# velocity.x = input_axis * SPEED
 		velocity.x = move_toward(velocity.x, movement_data.speed * input_axis, movement_data.acceleration * delta)
 
 func handle_air_acceleration(input_axis, delta):
