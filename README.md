@@ -1,6 +1,6 @@
-# Godot Heart Platformer - Part 8 
+# Godot Heart Platformer Tutorial
 
-[video](https://www.youtube.com/watch?v=vh-sx5Y32kE)
+[view playlist](https://www.youtube.com/playlist?list=PL9FzW-m48fn0i9GYBoTY-SI3yOBZjH1kJ)
 
 
 
